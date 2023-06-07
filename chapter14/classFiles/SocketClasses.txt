@@ -1,0 +1,166 @@
+Java Socket Classes 
+
+For TCP ( connection oriented) 
+
+-Socket
+-ServerSocket
+
+For UDP ( connection less )
+
+-DatagramSocket
+-DatagramPacket
+
+===========================================
+
+=Pakage For Socket
+
+java.net.Socket
+
+=Constructors for Socket 
+
+Socket()
+Socket(InetAddress address, int port)
+socket(Strin host, int port)
+
+=Methods For Socket
+
+void connect(SocketAddress endpoint)
+void bind(SocketAddress bindpoint)
+void close()
+
+boolean isBound();
+boolean isConnected();
+boolean isClosed();
+
+int getPort()
+
+-To return the InputStream attached with socket
+
+public InputStream getInputStream()
+
+-To return the OutputStream attached with socket
+
+public OutputStream getOutputStream()
+
+-To close socket
+
+public void close()
+
+________________________________________________
+
+
+ServerSocket Class
+
+for creating a server application 
+
+To establish communication with client, create an object
+
+=Constructors 
+
+ServerSocket()
+ServerSocket(int port)
+ServerSocket(int port, int maxQueue)
+ServerSocket(int port, int maxQueue, InetAddress localAddress)
+
+=Methods 
+
+Socket accept();
+
+void bind(SocketAddress endpoint)
+void close() 
+
+InetAddress getInetAddress()
+int getLocalPort()
+
+public Socket accept() 
+
+- return the socket 
+- establish connection between server and client
+
+public void close() 
+
+- closes the server socket
+
+________________________________________________
+
+Socket Programming in Java
+
+=Creating Server Program 
+
+ServerSocket serverSocket = new ServerSocket(<port numbers from client>);
+Socket clientSocket = serverSocket.accept();
+
+=Creating Client Program
+
+Socket socket = new Socket(<hostname>,port >= 1024);
+
+
+=Read Data From Client or Server 
+
+DataInputStream dataInput = new DataInputStream(socket.getInputStream());
+
+dataInput.readInt(); // for numbers;
+dataInput.readUTF(); // for String;
+
+
+=Write Data to Client or Server
+
+DataOutputStream dataOutput = new DataOutputStream(socket.getOutputStream());
+
+dataOutput.wrintInt(); // for numbers
+dataOutput.writeUTF(); // for String
+
+=Read Data from Console
+
+-Method1
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in))
+
+-Method2 
+
+Scanner scan = new Scanner(System.in);
+
+________________________________________________
+
+=Useful methods to receive responses from server
+
+
+-InputStream 
+
+read() 
+
+-DataInputStream
+
+read()
+readChar()
+readInt()
+readDouble()
+
+-InputStreamReader
+
+readLine()
+
+-BufferedReader
+
+readLine()
+
+________________________________________________
+
+Useful methods to send request to Server
+
+-OutputStream 
+
+write()
+
+-DataOutputStream
+
+print()
+
+-PrintStream
+
+print()
+
+-PrintWriter
+
+print()
+println()
