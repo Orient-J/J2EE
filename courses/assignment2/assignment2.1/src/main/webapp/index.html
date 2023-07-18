@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<!-- Custom Css 1 -->
+		
+		<link href="./style.css" rel="stylesheet" type="text/css">
+		
+		<!-- fontawesome 6 -->
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	</head>
+	<body>
+		
+		<form action="ServletSide" method="post">
+
+			<h3>Login Form</h3>
+				
+			<div class="form-group">
+				<label for="username" class="form-label">Username</label>
+				<input type="text" name="username" id="username" class="form-control" placeholder="Enter Your Username" autocomplete="off" />
+			</div>
+			
+			<div class="form-group">
+				<label for="password" class="form-label">Password</label>
+				<input type="password" name="password" id="password" class="form-control" placeholder="Enter Your Password" />
+				<i class="fa-solid fa-eye"></i>
+			</div>
+			
+			<input type="submit" class="btn" value="Login" />
+		</form>
+
+		<script type="text/javascript">
+
+			const eyeIcon = document.getElementsByClassName("fa-solid");
+			const passwordBox = document.getElementById("password");
+			
+
+			eyeIcon[0].addEventListener("click", function() {
+
+				if( eyeIcon[0].classList.contains("fa-eye") ) {
+
+					eyeIcon[0].classList.replace("fa-eye", "fa-eye-slash");
+					
+					passwordBox.type = "text";
+
+				}else{
+
+					eyeIcon[0].classList.replace("fa-eye-slash", "fa-eye");
+					
+					passwordBox.type = "password";
+				}
+			});
+		</script>
+	</body>
+</html>

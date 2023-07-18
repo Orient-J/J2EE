@@ -1,0 +1,2 @@
+Write two JSP pages such as "bookregister.jsp" , "bookinfo.jsp" and one JavaBean such as "book".
+In bookregister.jsp page, accept the user input such as Book Id, Book Name, Author and Published Date. When the user clicks the Register button in bookregister.jsp page,  book information that the user entered have to be displayed in bookinfo.jsp page.

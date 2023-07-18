@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<!-- Custom Css 1 -->
+		
+		<link href="./style.css" rel="stylesheet" type="text/css">
+		
+		<!-- fontawesome 6 -->
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	</head>
+	<body>
+		
+		<form action="ServletApp" method="post">
+
+			<h3>Registration Form</h3>
+
+            <div class="form-group">
+				<label for="roll" class="form-label">Roll No</label>
+				<input type="number" name="roll" id="roll" class="form-control" placeholder="Enter Your Roll No" autocomplete="off" />
+			</div>
+				
+			<div class="form-group">
+				<label for="name" class="form-label">Name</label>
+				<input type="text" name="name" id="name" class="form-control" placeholder="Enter Your Name" autocomplete="off" />
+			</div>
+
+            <select name="major" class="form-select">
+                <option disabled selected>Choose Your Major</option>
+                <option value="se">Software Engineering</option>
+                <option value="ke">Knowledge Engineering</option>
+                <option value="bis">Business Information System</option>
+                <option value="csf">Cyber Security Forensis</option>
+                <option value="hpc">High Performance Computing</option>
+                <option value="es">Embedded System</option>
+                <option value="net">Networking</option>
+            </select>
+
+            <div class="form-group">
+				<label for="email" class="form-label">Email</label>
+				<input type="email" name="email" id="email" class="form-control" placeholder="Enter Your Email" autocomplete="off" />
+			</div>
+			
+			<div class="form-group">
+				<label for="phone" class="form-label">Phone Number</label>
+				<input type="phone" name="phone" id="phone" class="form-control" placeholder="Enter Your Phone Number" />
+			</div>
+			
+			<input type="submit" class="btn" value="Login" />
+		</form>
+
+		<script type="text/javascript">
+
+			const eyeIcon = document.getElementsByClassName("fa-solid");
+			const phoneBox = document.getElementById("password");
+			
+
+			eyeIcon[0].addEventListener("click", function() {
+
+				if( eyeIcon[0].classList.contains("fa-eye") ) {
+
+					eyeIcon[0].classList.replace("fa-eye", "fa-eye-slash");
+					
+					passwordBox.type = "text";
+
+				}else{
+
+					eyeIcon[0].classList.replace("fa-eye-slash", "fa-eye");
+					
+					passwordBox.type = "password";
+				}
+			});
+		</script>
+	</body>
+</html>

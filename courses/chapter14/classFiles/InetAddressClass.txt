@@ -1,0 +1,15 @@
+locate package = java.net 
+class name = InetAddress
+
+methods 
+
+String getHostAddress()
+String getHostName()
+
+static InetAddress.getLocalHost()
+static InetAddress.getByName(String host)
+static InetAddress[] InetAddress.getAllByName(String host)
+static InetAddress.getByAddress(String host, byte[] address)
+
+boolean isLoopbackAddress()
+boolean isMulticastAddress()

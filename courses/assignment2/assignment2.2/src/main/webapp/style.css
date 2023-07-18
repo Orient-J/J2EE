@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+*{
+	
+	box-sizing: border-box;
+	
+	padding: 0;
+	margin: 0;
+}
+
+
+body {
+	
+	height: 100vh;
+	
+	background-color: #000;
+	color: #fff;
+
+	font-weight: bolder;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	overflow: hidden;
+}
+
+form{   
+
+    width: 500px;
+
+	border-radius: 20px;
+
+	box-shadow: 5px 5px 50px rgba(255,255,255,0.5);
+	padding: 50px;
+}
+
+form h3 {
+
+	font-size: 2em;
+}
+
+form .form-group {
+
+	display: flex;
+	flex-direction: column;
+
+	position: relative;
+
+	margin: 50px 0;
+}
+
+form .form-group .form-label {
+
+	font-size: 1.3em;
+}
+
+form .form-group .form-control {
+
+	background-color: transparent;
+	color: #fff;
+
+	width: 100%;
+
+	font-size: 20px;
+
+	border: none;
+	border-bottom: 2px solid transparent;
+
+	caret-color: #fff;
+
+	padding: 10px 0;
+	margin-top: 20px;
+
+}
+
+form .form-group .form-control:focus {
+
+	outline: none;
+	border-bottom-color: #fff;
+
+	transition: all 0.5s;
+
+}	
+
+
+form .btn {
+
+	width: 100%;
+
+	font-size: 18px;
+	font-weight: 800;
+
+	border: none;
+	border-radius: 5px;
+
+	padding: 10px;
+
+	cursor: pointer;
+
+	transition: all 0.5s;
+
+}
+
+form .btn:hover {
+
+	box-shadow: 3px 3px 50px rgba(255,255,255,0.4);
+
+	transform: scale(1.005);
+
+}
+
+form .btn:active {
+
+	transform: none;
+	box-shadow: none;
+}
+
+
+
+
+
+
+/* ...................................... */
